@@ -13,6 +13,7 @@ body {
   background: #05070d;
   color: #ffffff;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .navbar {
@@ -109,7 +110,7 @@ body {
   display: flex;
   align-items: center;
 
-  padding: 140px 8% 80px;
+  padding: 100px 8% 80px;
 
   background:
     linear-gradient(

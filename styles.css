@@ -116,6 +116,7 @@ body {
       rgba(3, 6, 15, 0.35)
     ),
     url("images/1.png") center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 .hero-overlay {
@@ -313,6 +314,12 @@ section:not(.hero)::before {
   background-size: cover;
   background-position: center;
 }
+
+.main-preview,
+.property-image {
+  transition: background-position 0.2s ease-out;
+}
+
 
 .img-1 {
   background-image:
@@ -681,6 +688,12 @@ section:not(.hero)::before {
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 700px) {
   .admin-mockup {
     min-height: auto;
@@ -721,4 +734,23 @@ section:not(.hero)::before {
     min-width: 620px;
     grid-template-columns: 1.4fr 1fr 1fr 0.6fr;
   }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.property-card:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.property-card:nth-child(3) {
+  transition-delay: 0.24s;
 }

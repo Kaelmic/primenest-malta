@@ -680,3 +680,45 @@ section:not(.hero)::before {
     display: none;
   }
 }
+
+@media (max-width: 700px) {
+  .admin-mockup {
+    min-height: auto;
+    border-radius: 22px;
+  }
+
+  .admin-sidebar {
+    padding: 22px;
+  }
+
+  .admin-sidebar ul {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .admin-sidebar li {
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+
+  .admin-content {
+    padding: 22px;
+    overflow-x: hidden;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-table {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .table-row {
+    min-width: 620px;
+    grid-template-columns: 1.4fr 1fr 1fr 0.6fr;
+  }
+}

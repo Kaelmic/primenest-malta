@@ -24,6 +24,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#admin-preview">Admin</a></li>
         </ul>
       </nav>
 
@@ -67,11 +68,204 @@
     </div>
   </section>
 
-<!-- 
-  <section id="properties"></section>
-  <section id="about"></section>
-  <section id="services"></section>
-  <section id="contact"></section> -->
+
+  <section id="properties" class="properties-section">
+  <div class="section-header">
+    <p class="section-label">Featured Listings</p>
+    <h2>Explore Properties in Malta</h2>
+    <p>Sample property cards for demo purposes. These can later become dynamic listings.</p>
+  </div>
+
+  <div class="property-grid">
+    <article class="property-card">
+      <div class="property-image img-1">
+        <span>For Sale</span>
+      </div>
+      <div class="property-info">
+        <h3>Modern Apartment in Sliema</h3>
+        <p class="location">Sliema, Malta</p>
+        <p class="price">€385,000</p>
+        <div class="property-meta">
+          <span>2 Beds</span>
+          <span>2 Baths</span>
+          <span>110m²</span>
+        </div>
+        <a href="#property-preview" class="property-link">View Details</a>
+      </div>
+    </article>
+
+    <article class="property-card">
+      <div class="property-image img-2">
+        <span>For Rent</span>
+      </div>
+      <div class="property-info">
+        <h3>Luxury Penthouse with Sea View</h3>
+        <p class="location">St. Julian’s, Malta</p>
+        <p class="price">€2,200 / month</p>
+        <div class="property-meta">
+          <span>3 Beds</span>
+          <span>2 Baths</span>
+          <span>160m²</span>
+        </div>
+        <a href="#property-preview" class="property-link">View Details</a>
+      </div>
+    </article>
+
+    <article class="property-card">
+      <div class="property-image img-3">
+        <span>For Sale</span>
+      </div>
+      <div class="property-info">
+        <h3>Townhouse with Private Yard</h3>
+        <p class="location">Rabat, Malta</p>
+        <p class="price">€520,000</p>
+        <div class="property-meta">
+          <span>4 Beds</span>
+          <span>3 Baths</span>
+          <span>220m²</span>
+        </div>
+        <a href="#property-preview" class="property-link">View Details</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<section id="property-preview" class="single-property">
+  <div class="single-property-grid">
+    <div class="property-gallery">
+      <div class="main-preview"></div>
+
+      <div class="thumbnail-row">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="property-details">
+      <p class="section-label">Property Preview</p>
+      <h2>Modern Apartment in Sliema</h2>
+      <p class="location">Sliema, Malta</p>
+      <p class="price large">€385,000</p>
+
+      <div class="property-meta detail-meta">
+        <span>2 Bedrooms</span>
+        <span>2 Bathrooms</span>
+        <span>110m²</span>
+      </div>
+
+      <p class="property-description">
+        A clean and modern apartment located in one of Malta’s most requested areas.
+        This mockup shows how each property page could display photos, price,
+        features, location, and inquiry options.
+      </p>
+
+      <a href="#contact" class="btn primary-btn">Ask About This Property</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="admin-preview" class="admin-section">
+  <div class="section-header">
+    <p class="section-label">Future Admin Access</p>
+    <h2>Simple Property Management Dashboard</h2>
+    <p>Manage property listings.</p>
+  </div>
+
+  <div class="admin-mockup">
+    <aside class="admin-sidebar">
+      <h3>Admin</h3>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Properties</li>
+        <li>Add New</li>
+        <li>Messages</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
+
+    <div class="admin-content">
+      <div class="admin-top">
+        <h3>Property Listings</h3>
+        <button>Add Property</button>
+      </div>
+
+      <div class="admin-stats">
+        <div>
+          <strong>24</strong>
+          <span>Total Listings</span>
+        </div>
+        <div>
+          <strong>8</strong>
+          <span>For Rent</span>
+        </div>
+        <div>
+          <strong>16</strong>
+          <span>For Sale</span>
+        </div>
+      </div>
+
+      <div class="admin-table">
+        <div class="table-row table-head">
+          <span>Property</span>
+          <span>Status</span>
+          <span>Price</span>
+          <span>Action</span>
+        </div>
+
+        <div class="table-row">
+          <span>Sliema Apartment</span>
+          <span>For Sale</span>
+          <span>€385,000</span>
+          <span>Edit</span>
+        </div>
+
+        <div class="table-row">
+          <span>St. Julian’s Penthouse</span>
+          <span>For Rent</span>
+          <span>€2,200/mo</span>
+          <span>Edit</span>
+        </div>
+
+        <div class="table-row">
+          <span>Rabat Townhouse</span>
+          <span>For Sale</span>
+          <span>€520,000</span>
+          <span>Edit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="content-section">
+  <p class="section-label">About</p>
+  <h2>Helping clients find the right property with confidence.</h2>
+  <p>
+    PrimeNest Malta is a real estate concept focused on clean presentation,
+    simple property browsing, and easy contact options.
+  </p>
+</section>
+
+<section id="services" class="content-section">
+  <p class="section-label">Services</p>
+  <h2>Property sales, rentals, and client support.</h2>
+  <p>
+    Property valuations, rental management,
+    consultations, and buyer support.
+  </p>
+</section>
+
+<section id="contact" class="contact-section">
+  <p class="section-label">Contact</p>
+  <h2>Interested in a property?</h2>
+  <p>Contact the agent to book a viewing or ask for more information.</p>
+
+  <a href="mailto:info@example.com" class="btn primary-btn">Send Inquiry</a>
+</section>
 
 </body>
 </html>

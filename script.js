@@ -1,3 +1,12 @@
+const heroParallax = document.querySelector(".hero-parallax");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  heroParallax.style.transform =
+    `translateY(${scrollY * 0.25}px) scale(1.08)`;
+});
+
 const revealElements = document.querySelectorAll(".reveal");
 
   function revealOnScroll() {

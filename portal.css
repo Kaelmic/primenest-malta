@@ -1,0 +1,291 @@
+:root {
+  --bg: #f5f1ea;
+  --paper: #fffaf2;
+  --ink: #171717;
+  --muted: #6f6a60;
+  --line: rgba(23,23,23,.12);
+  --accent: #8a6f3d;
+  --olive: #5f6f52;
+  --dark: #1f241d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portal-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.portal-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 30px;
+  background: #ebe4d8;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-logo {
+  margin-bottom: 56px;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.portal-logo span {
+  display: block;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.portal-logo small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: .65rem;
+  letter-spacing: .38em;
+}
+
+.portal-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.portal-nav a {
+  padding: 13px 14px;
+  border-radius: 12px;
+  color: var(--muted);
+  transition: .2s ease;
+}
+
+.portal-nav a:hover,
+.portal-nav a.active {
+  background: var(--dark);
+  color: white;
+}
+
+.logout-link {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  color: var(--muted);
+
+  transition: .25s ease;
+}
+
+.logout-link:hover {
+  background: rgba(23,23,23,.08);
+  color: var(--ink);
+}
+
+.logout-link img {
+  width: 18px;
+  height: 18px;
+  opacity: .7;
+}
+
+.logout-link:hover img {
+  opacity: 1;
+}
+
+.portal-main {
+  padding: 44px;
+}
+
+.portal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.section-label {
+  margin-bottom: 10px;
+  color: var(--olive);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.portal-header h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: .95;
+  font-weight: 400;
+  letter-spacing: -.05em;
+}
+
+.portal-header button {
+  border: none;
+  border-radius: 999px;
+  padding: 13px 20px;
+  background: var(--dark);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.portal-header button:hover {
+  background: #30392c;
+  transform: translateY(-2px);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.stat-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.portal-panel {
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.panel-top {
+  margin-bottom: 24px;
+}
+
+.panel-top h2 {
+  margin-bottom: 6px;
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.panel-top p {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.listing-table {
+  display: grid;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.table-row {
+  min-width: 720px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr .6fr;
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f5f1ea;
+  color: var(--muted);
+}
+
+.table-head {
+  background: #ebe4d8;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-style: normal;
+  font-size: .75rem;
+}
+
+.badge.sale {
+  background: rgba(95,111,82,.12);
+  color: var(--olive);
+}
+
+.badge.rent {
+  background: rgba(138,111,61,.13);
+  color: var(--accent);
+}
+
+.table-row a {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .portal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .portal-nav {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .portal-nav a {
+    flex: 0 0 auto;
+  }
+
+  .back-link {
+    margin-top: 24px;
+  }
+
+  .portal-main {
+    padding: 32px 7%;
+  }
+
+  .portal-header {
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

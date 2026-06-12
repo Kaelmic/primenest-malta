@@ -82,8 +82,43 @@
     <p>Browse selected homes, apartments, and rental opportunities across Malta.</p>
   </div>
 
+  <div class="property-filters">
+  <select id="filterStatus">
+    <option value="all">Buy or Rent</option>
+    <option value="sale">For Sale</option>
+    <option value="rent">For Rent</option>
+  </select>
+
+  <select id="filterLocation">
+    <option value="all">Location</option>
+    <option value="sliema">Sliema</option>
+    <option value="st-julians">St. Julian's</option>
+    <option value="rabat">Rabat</option>
+  </select>
+
+  <select id="filterType">
+    <option value="all">Property Type</option>
+    <option value="apartment">Apartment</option>
+    <option value="penthouse">Penthouse</option>
+    <option value="maisonette">Maisonette</option>
+    <option value="villa">Villa</option>
+  </select>
+
+  <select id="filterBedrooms">
+    <option value="all">Bedrooms</option>
+    <option value="1">1+</option>
+    <option value="2">2+</option>
+    <option value="3">3+</option>
+  </select>
+
+  <button id="resetFilters">Reset</button>
+</div>
+
   <div class="property-grid">
-    <article class="property-card reveal">
+    <article class="property-card reveal" data-status="sale"
+  data-location="sliema"
+  data-type="apartment"
+  data-bedrooms="2">
       <div class="property-image img-1">
         <span>For Sale</span>
       </div>
@@ -100,7 +135,10 @@
       </div>
     </article>
 
-    <article class="property-card reveal">
+    <article class="property-card reveal" data-status="rent"
+  data-location="st-julians"
+  data-type="penthouse"
+  data-bedrooms="3">
       <div class="property-image img-2">
         <span>For Rent</span>
       </div>
@@ -117,7 +155,10 @@
       </div>
     </article>
 
-    <article class="property-card reveal">
+    <article class="property-card reveal" data-status="sale"
+  data-location="rabat"
+  data-type="apartment"
+  data-bedrooms="4">
       <div class="property-image img-3">
         <span>For Sale</span>
       </div>
@@ -261,11 +302,79 @@
 </section>
 
 <section id="contact" class="contact-section reveal">
-  <p class="section-label">Contact</p>
-  <h2>Interested in a property?</h2>
-  <p>Contact the agent to book a viewing or ask for more information.</p>
+  <div class="inquiry-wrap">
+    <div class="inquiry-copy">
+      <p class="section-label">Private Inquiry</p>
+      <h2>Tell us what kind of property you are looking for.</h2>
+      <p>
+        Share your preferred location, budget, and viewing schedule. 
+        Our team will review your enquiry and get back to you with suitable options.
+      </p>
 
-  <a href="mailto:info@primenestmalta.com" class="btn primary-btn">Send Inquiry</a>
+      <div class="inquiry-points">
+        <span>01 Malta-based listings</span>
+        <span>02 Viewing request support</span>
+        <span>03 Sale and rental enquiries</span>
+      </div>
+    </div>
+
+    <form class="property-inquiry-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name" required>
+        </div>
+
+        <div class="form-field">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Looking For</label>
+          <select required>
+            <option value="">Select option</option>
+            <option>Buy a property</option>
+            <option>Rent a property</option>
+            <option>Book a viewing</option>
+            <option>General property advice</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label>Preferred Location</label>
+          <input type="text" placeholder="e.g. Sliema, Mosta, Rabat">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Budget Range</label>
+          <input type="text" placeholder="e.g. €250,000 - €400,000">
+        </div>
+
+        <div class="form-field">
+          <label>Viewing Timeline</label>
+          <select>
+            <option value="">Select timeline</option>
+            <option>As soon as possible</option>
+            <option>This week</option>
+            <option>This month</option>
+            <option>Still researching</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Message</label>
+        <textarea placeholder="Tell us more about what you need..." rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="inquiry-submit">Send Property Inquiry</button>
+    </form>
+  </div>
 </section>
 
 <footer class="footer">

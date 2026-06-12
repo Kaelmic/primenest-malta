@@ -39,3 +39,51 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+const filters = {
+  status: document.getElementById("filterStatus"),
+  location: document.getElementById("filterLocation"),
+  type: document.getElementById("filterType"),
+  bedrooms: document.getElementById("filterBedrooms"),
+};
+
+const propertyCards = document.querySelectorAll(".property-card");
+const resetBtn = document.getElementById("resetFilters");
+
+function filterProperties() {
+  propertyCards.forEach(card => {
+    const statusMatch =
+      filters.status.value === "all" ||
+      card.dataset.status === filters.status.value;
+
+    const locationMatch =
+      filters.location.value === "all" ||
+      card.dataset.location === filters.location.value;
+
+    const typeMatch =
+      filters.type.value === "all" ||
+      card.dataset.type === filters.type.value;
+
+    const bedroomsMatch =
+      filters.bedrooms.value === "all" ||
+      Number(card.dataset.bedrooms) >= Number(filters.bedrooms.value);
+
+    if (statusMatch && locationMatch && typeMatch && bedroomsMatch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+Object.values(filters).forEach(filter => {
+  filter.addEventListener("change", filterProperties);
+});
+
+resetBtn.addEventListener("click", () => {
+  Object.values(filters).forEach(filter => {
+    filter.value = "all";
+  });
+
+  filterProperties();
+});

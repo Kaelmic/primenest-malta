@@ -164,6 +164,7 @@ button:hover {
   font-family: Arial, sans-serif;
   font-size: .85rem;
   transition: .25s ease;
+  text-decoration: none;
 }
 
 .back-home:hover {
